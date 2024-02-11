@@ -1,0 +1,20 @@
+{
+  "name": "sf-aws-integration",
+  "version": "1.0.0",
+  "description": "sf event relay and aws eventbridge automate setup after env refresh",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gsl",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-cloudwatch-logs": "^3.504.0",
+    "@aws-sdk/client-eventbridge": "^3.496.0",
+    "@aws-sdk/client-schemas": "^3.499.0",
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2"
+  },
+  "type": "module"
+}
