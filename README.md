@@ -17,6 +17,6 @@ This app automates the setup of a Salesforce Event Relay and associated AWS Even
 
 **Auth:** OAuth 2.0 Authorization Code Flow used for Salesforce connected app (scope: "refresh_token api id"); AWS handled with local credentials/config file(s)
 
-**Uses Node modules (v.14 and later):** update Node.js to latest LTS version
+**Uses ES modules (Node v.14 and later):** recommend update Node.js to latest LTS version
 
 **run:** node start.js
