@@ -208,7 +208,6 @@ async function fetchRemoteResource(
 
       console.log("\nAWS resources created successfully.");
       return { success: true, accessToken: access_token };
-
     } else {
       console.log(
         "Remote Resource not populated yet - retrying",
@@ -244,11 +243,13 @@ async function validateFunctionality(accessToken) {
 
     // retrieve the last event in the CloudWatch Logs stream & compare with the event sent
     const logStreamName = await describeLogStreams(process.env.LOG_GROUP_NAME);
+    console.log("\nlogStreamName:", logStreamName);
     const logStreamEvent = await getLogEvents(
       logStreamName,
       process.env.LOG_GROUP_NAME
     );
     const logStreamEventData = JSON.parse(logStreamEvent);
+    console.log("\nlogStreamEventData:", logStreamEventData);
     const payload = logStreamEventData.detail.payload;
 
     if (!payload) {
